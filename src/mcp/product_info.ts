@@ -54,10 +54,10 @@ async function readProducts(): Promise<Product[]> {
         type: String(row.getCell(2).value || ""), // Type
         sku: String(row.getCell(3).value || ""), // SKU
         name: String(row.getCell(5).value || ""), // Name (column 5)
-        shortDescription: String(row.getCell(8).value || ""), // Short description
-        description: String(row.getCell(9).value || ""), // Description
-        inStock: String(row.getCell(19).value || "").toLowerCase() === "yes", // In stock?
-        stock: Number(row.getCell(20).value || 0), // Stock
+        shortDescription: String(row.getCell(9).value || ""), // Short description
+        description: String(row.getCell(10).value || ""), // Description
+        inStock: String(row.getCell(15).value || "").toLowerCase() === "yes", // In stock?
+        stock: Number(row.getCell(16).value || 0), // Stock
         salePrice: Number(row.getCell(26).value || 0), // Sale price
         regularPrice: Number(row.getCell(27).value || 0), // Regular price
         price: Number(row.getCell(27).value || row.getCell(26).value || 0), // Use regular price, fallback to sale price
