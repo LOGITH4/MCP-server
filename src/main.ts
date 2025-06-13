@@ -4,10 +4,10 @@ const transportArgVal = transportArg?.split("=")[1];
 
 (async () => {
   if (transportArg && transportArgVal === "sse") {
-    require("@/transports/sse.js");
+    await import("./transports/sse.ts");
     process.env.MCP_TRANSPORT = "SSE";
   } else {
-    require("@/transports/stdio.js");
+    await import("./transports/stdio.ts");
     process.env.MCP_TRANSPORT = "STDIO";
   }
 })();

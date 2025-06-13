@@ -1,8 +1,11 @@
 {
   "name": "pointnxt_mcp_server",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "scripts": {
+    "start:stdio": "tsx src/main.ts --transport=stdio",
+    "start:sse": "tsx src/main.ts --transport=sse",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,10 +16,12 @@
     "@modelcontextprotocol/sdk": "^1.12.1",
     "axios": "^1.9.0",
     "dotenv": "^16.5.0",
+    "exceljs": "^4.4.0",
     "zod": "^3.25.61"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",
+    "@types/xlsx": "^0.0.36",
     "tsx": "^4.20.1",
     "typescript": "^5.8.3"
   }
